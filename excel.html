@@ -1,0 +1,399 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Maji Ndongo Analysis - Msizi Mthimkhulu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Custom Styles -->
+		<style>
+			/* SQL Code Block Styling */
+			pre.code-block {
+				background: #2e3141;
+				border: 1px solid #ffffff33;
+				border-radius: 4px;
+				padding: 1.5em;
+				overflow-x: auto;
+				font-family: 'Courier New', Courier, monospace;
+				color: #e0e0e0;
+			}
+			.sql-keyword { color: #f7a072; font-weight: bold; }
+			.sql-string { color: #a8d5e2; }
+
+			/* --- DROPDOWN / ACCORDION STYLING --- */
+			details.custom-dropdown {
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				border-radius: 4px;
+				margin-bottom: 1em;
+				transition: all 0.3s ease;
+			}
+			
+			details.custom-dropdown[open] {
+				background: rgba(255, 255, 255, 0.1);
+				border-color: #f7a072; /* Highlight color when open */
+			}
+
+			summary.dropdown-trigger {
+				padding: 1em;
+				cursor: pointer;
+				font-weight: bold;
+				list-style: none; /* Remove default triangle */
+				position: relative;
+				padding-right: 2.5em;
+				color: #ffffff;
+			}
+
+			/* Custom arrow icon */
+			summary.dropdown-trigger::after {
+				content: '+'; 
+				position: absolute;
+				right: 1em;
+				font-weight: bold;
+				font-size: 1.2em;
+				color: #f7a072;
+			}
+
+			details.custom-dropdown[open] summary.dropdown-trigger::after {
+				content: '-';
+			}
+
+			/* Remove default arrow in Chrome/Safari */
+			summary.dropdown-trigger::-webkit-details-marker {
+				display: none;
+			}
+
+			.dropdown-content {
+				padding: 0 1.5em 1.5em 1.5em;
+				color: #dcdcdc;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				margin-top: 0.5em;
+			}
+			
+			.dropdown-content strong {
+				color: #f7a072; /* Accent color for findings */
+			}
+
+			/* --- SLIDESHOW CSS START --- */
+			.slideshow-container {
+				max-width: 700px; 
+				position: relative;
+				margin: 0 auto 3em auto;
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				background: rgba(0,0,0,0.2);
+			}
+
+			.mySlides {
+				display: none;
+				text-align: center;
+			}
+			
+			.mySlides img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+
+			.prev, .next {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				width: auto;
+				margin-top: -22px;
+				padding: 16px;
+				color: white;
+				font-weight: bold;
+				font-size: 18px;
+				transition: 0.6s ease;
+				border-radius: 0 3px 3px 0;
+				user-select: none;
+				background-color: rgba(0,0,0,0.3);
+			}
+
+			.next {
+				right: 0;
+				border-radius: 3px 0 0 3px;
+			}
+
+			.prev:hover, .next:hover {
+				background-color: rgba(0,0,0,0.8);
+			}
+
+			.text {
+				color: #f2f2f2;
+				font-size: 15px;
+				padding: 8px 12px;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				text-align: center;
+				background-color: rgba(0,0,0,0.6);
+			}
+
+			.numbertext {
+				color: #f2f2f2;
+				font-size: 12px;
+				padding: 8px 12px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: rgba(0,0,0,0.5);
+			}
+
+			.fade {
+				animation-name: fade;
+				animation-duration: 1.5s;
+			}
+
+			@keyframes fade {
+				from {opacity: .4}
+				to {opacity: 1}
+			}
+			/* --- SLIDESHOW CSS END --- */
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">MNM Portfolio</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="home.html">Home</a></li>
+								<li><a href="writings.html">Writings</a></li>
+								<li><a href="certificates.html">Certificates</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Microsoft Excel</h2> 
+								<p>Simplified complex data and easy-to-read spreadsheets</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<!-- SLIDESHOW -->
+									<div class="slideshow-container">
+										<!-- Slide 1 -->
+										<div class="mySlides fade">
+											<div class="numbertext">1 / 3</div>
+											<img src="images/WW.png" alt="Distribution of Population">
+											<div class="text">Population Distribution & Regional Data</div>
+										</div>
+
+										<!-- Slide 2 -->
+										<div class="mySlides fade">
+											<div class="numbertext">2 / 3</div>
+											<img src="images/WWW.png" alt="Water Access Trends">
+											<div class="text">Water Access Trends by Region</div>
+										</div>
+
+										<!-- Slide 3 -->
+										<div class="mySlides fade">
+											<div class="numbertext">3 / 3</div>
+											<img src="images/W.png" alt="SQL Data">
+											<div class="text">Raw Data Analysis</div>
+										</div>
+
+										<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+										<a class="next" onclick="plusSlides(1)">&#10095;</a>
+									</div>
+									<!-- END SLIDESHOW -->
+
+									<!-- Section 1: Introduction -->
+									<section>
+										<h3 class="major">Introduction</h3>
+										<p>Access to safely managed drinking water is a fundamental human right and a key indicator of global development. This analysis reviews data spanning two decades (2000–2020) to understand how the world has progressed, where the population is concentrated, and how disparities persist between urban and rural environments.</p>
+										<p>Below is a breakdown of the key questions investigated through this data visualization and the answers derived from the trends. <strong>Click on a question below to reveal the findings.</strong></p>
+									</section>
+
+									<!-- Section 2: Investigation & Findings (DROPDOWNS) -->
+									<section>
+										<h3 class="major">Investigation & Findings</h3>
+
+										<!-- Question 1 -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">Question 1: How is the population distributed across the regions studied?</summary>
+											<div class="dropdown-content">
+												<p><strong>Visualization Reference:</strong> Distribution of Population by Region (Center Pie Chart)</p>
+												<p><strong>Finding:</strong> The global population in this dataset is not evenly distributed. The largest segments are represented by East Asia & Pacific (Dark Blue) and South Asia (Yellow).</p>
+												<p><strong>Insight:</strong> Because these two regions hold the majority of the population share, improvements or regressions in water access in these specific areas have a disproportionate impact on global statistics compared to regions like North America or the Middle East.</p>
+											</div>
+										</details>
+
+										<!-- Question 2 -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">Question 2: What is the variability in water access progress? Are all nations improving?</summary>
+											<div class="dropdown-content">
+												<p><strong>Visualization Reference:</strong> Range of Water Access Indicator (Top Left Bar Chart)</p>
+												<p><strong>Finding:</strong> The chart analyzes the Annual Rate of Change (ARC) for National (Blue), Urban (Orange), and Rural (Yellow) sectors.</p>
+												<ul>
+													<li><strong>Maximum:</strong> There are significant positive outliers, particularly at the National level (large blue bar), indicating some countries have made massive leaps in providing access.</li>
+													<li><strong>Minimum:</strong> Concern lies in the negative values (bars extending to the left). This indicates that in some specific areas, water access has actually declined or failed to keep pace with population growth.</li>
+												</ul>
+												<p><strong>Insight:</strong> Progress is not uniform. While the global average is hovering near stable, the disparity between the best-performing and worst-performing nations is stark.</p>
+											</div>
+										</details>
+
+										<!-- Question 3 -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">Question 3: Is the overall global trend moving toward better access?</summary>
+											<div class="dropdown-content">
+												<p><strong>Visualization Reference:</strong> Average Water Access Progress by Region (Top Right Column Chart)</p>
+												<p><strong>Finding:</strong> We categorized progress into three buckets: Negative Progress (ARC < 0), Stagnant (ARC = 0), and Positive Progress (ARC > 0). The vast majority of the data falls into the ARC > 0 category (the tallest set of bars).</p>
+												<p><strong>Insight:</strong> The world is overwhelmingly moving in the right direction. The blue bar (National) and red bar (Rural) in the "ARC > 0" section are the highest, suggesting that rural areas are finally seeing the focused development needed to catch up.</p>
+											</div>
+										</details>
+
+										<!-- Question 4 -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">Question 4: Which regions show the most significant trends or gaps?</summary>
+											<div class="dropdown-content">
+												<p><strong>Visualization Reference:</strong> Water Access Trends by Region with Overall Trend (Bottom Left Combination Chart)</p>
+												<p><strong>Finding:</strong> The chart ranks regions by their access metrics/rates. Sub-Saharan Africa and South Asia stand as the tallest bars on the left side of the chart.</p>
+												<p><strong>Answer:</strong> These regions represent the areas of most intense activity—likely indicating they have the highest rates of change because they started with the largest gaps in infrastructure.</p>
+												<p><strong>Insight:</strong> The Pareto curve (red line) shows that the first few regions (Sub-Saharan Africa, South Asia, Middle East) account for the vast majority of the cumulative trend data, marking them as the critical zones for future policy focus.</p>
+											</div>
+										</details>
+
+										<!-- Question 5 -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">Question 5: How wide is the Urban-Rural divide regarding full water access?</summary>
+											<div class="dropdown-content">
+												<p><strong>Visualization Reference:</strong> Population with Full Water Access by Residence (Bottom Right Column Chart)</p>
+												<p><strong>Finding:</strong>
+												<br><em>Urban Areas:</em> Show high consistency and high volumes of "Full Access."
+												<br><em>Rural Areas:</em> Show a much lower volume of "Full Access" compared to the national average. However, they show significant activity in the "ARC > 0" metric.</p>
+												<p><strong>Answer:</strong> A gap clearly exists. Urban populations enjoy significantly higher stability and access.</p>
+												<p><strong>Insight:</strong> While the gap remains, the data shows that rural areas are currently experiencing positive rates of change, suggesting that global efforts are successfully targeting these underserved populations, though parity has not yet been reached.</p>
+											</div>
+										</details>
+
+									</section>
+
+									<!-- Section 3: Conclusion -->
+									<section>
+										<h3 class="major">Conclusion</h3>
+										<p>The 2000–2020 data paints a picture of uneven but undeniable progress.</p>
+										<ul>
+											<li><strong>Global Momentum:</strong> The majority of the world is experiencing a positive Annual Rate of Change (ARC > 0) in drinking water access.</li>
+											<li><strong>The Battleground is Rural:</strong> The most significant disparities exist in rural sectors. However, this is also where the most aggressive positive changes are currently happening.</li>
+											<li><strong>Regional Focus:</strong> Future humanitarian and infrastructure efforts must continue to focus on Sub-Saharan Africa and South Asia. As the most populous and dynamic regions in this dataset, their success will determine the global success of safely managed drinking water goals.</li>
+										</ul>
+									</section>
+
+									<!-- Section 4: Relevant Code (Optional) -->
+									<section>
+									
+									</section>
+
+								</div>
+							</div>
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Interested in my data analysis work? Feel free to reach out for collaborations.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-phone">063 056 6977</li>
+								<li class="icon solid fa-envelope"><a href="mailto:msiziminxmtshali@gmail.com">msiziminxmtshali@gmail.com</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/msizi-mthimkhulu-3720bb23a">LinkedIn</a></li>
+								<li class="icon brands fa-github"><a href="https://github.com/msiziminxmtshali-jpg">Github</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Msizi Mthimkhulu. All rights reserved.</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<!-- Slideshow Script -->
+			<script>
+				let slideIndex = 1;
+				showSlides(slideIndex);
+
+				// Next/previous controls
+				function plusSlides(n) {
+					showSlides(slideIndex += n);
+				}
+
+				// Thumbnail image controls
+				function currentSlide(n) {
+					showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+					let i;
+					let slides = document.getElementsByClassName("mySlides");
+					if (n > slides.length) {slideIndex = 1}
+					if (n < 1) {slideIndex = slides.length}
+					for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";
+					}
+					slides[slideIndex-1].style.display = "block";
+				}
+				
+				// Optional: Auto-play every 5 seconds
+				setInterval(function() {
+					plusSlides(1);
+				}, 5000); 
+			</script>
+
+	</body>
+</html>

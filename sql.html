@@ -1,0 +1,447 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Maji Ndongo Analysis - Msizi Mthimkhulu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Custom Styles -->
+		<style>
+			/* SQL Code Block Styling */
+			pre.code-block {
+				background: #2e3141;
+				border: 1px solid #ffffff33;
+				border-radius: 4px;
+				padding: 1.5em;
+				overflow-x: auto;
+				font-family: 'Courier New', Courier, monospace;
+				color: #e0e0e0;
+			}
+			.sql-keyword { color: #f7a072; font-weight: bold; }
+			.sql-string { color: #a8d5e2; }
+
+			/* --- DROPDOWN / ACCORDION STYLING --- */
+			details.custom-dropdown {
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				border-radius: 4px;
+				margin-bottom: 1em;
+				transition: all 0.3s ease;
+			}
+			
+			details.custom-dropdown[open] {
+				background: rgba(255, 255, 255, 0.1);
+				border-color: #f7a072; /* Highlight color when open */
+			}
+
+			summary.dropdown-trigger {
+				padding: 1em;
+				cursor: pointer;
+				font-weight: bold;
+				list-style: none; /* Remove default triangle */
+				position: relative;
+				padding-right: 2.5em;
+				color: #ffffff;
+			}
+
+			/* Custom arrow icon */
+			summary.dropdown-trigger::after {
+				content: '+'; 
+				position: absolute;
+				right: 1em;
+				font-weight: bold;
+				font-size: 1.2em;
+				color: #f7a072;
+			}
+
+			details.custom-dropdown[open] summary.dropdown-trigger::after {
+				content: '-';
+			}
+
+			/* Remove default arrow in Chrome/Safari */
+			summary.dropdown-trigger::-webkit-details-marker {
+				display: none;
+			}
+
+			.dropdown-content {
+				padding: 0 1.5em 1.5em 1.5em;
+				color: #dcdcdc;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				margin-top: 0.5em;
+			}
+			
+			.dropdown-content strong {
+				color: #f7a072; /* Accent color for findings */
+			}
+			
+			.dropdown-content ul {
+				margin-bottom: 1em;
+			}
+
+			/* --- SLIDESHOW CSS START --- */
+			.slideshow-container {
+				/* CHANGE THIS VALUE TO MAKE IMAGES BIGGER OR SMALLER */
+				max-width: 700px; 
+				position: relative;
+				margin: 0 auto 3em auto; /* Centered with margin at bottom */
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				background: rgba(0,0,0,0.2); /* Dark background behind images */
+			}
+
+			/* Hide the images by default */
+			.mySlides {
+				display: none;
+				text-align: center;
+			}
+			
+			/* Force images to fit nicely */
+			.mySlides img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+
+			/* Next & previous buttons */
+			.prev, .next {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				width: auto;
+				margin-top: -22px;
+				padding: 16px;
+				color: white;
+				font-weight: bold;
+				font-size: 18px;
+				transition: 0.6s ease;
+				border-radius: 0 3px 3px 0;
+				user-select: none;
+				background-color: rgba(0,0,0,0.3);
+			}
+
+			/* Position the "next button" to the right */
+			.next {
+				right: 0;
+				border-radius: 3px 0 0 3px;
+			}
+
+			/* On hover, add a black background color with a little bit see-through */
+			.prev:hover, .next:hover {
+				background-color: rgba(0,0,0,0.8);
+			}
+
+			/* Caption text */
+			.text {
+				color: #f2f2f2;
+				font-size: 15px;
+				padding: 8px 12px;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				text-align: center;
+				background-color: rgba(0,0,0,0.6);
+			}
+
+			/* Number text (1/3 etc) */
+			.numbertext {
+				color: #f2f2f2;
+				font-size: 12px;
+				padding: 8px 12px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: rgba(0,0,0,0.5);
+			}
+
+			/* Fading animation */
+			.fade {
+				animation-name: fade;
+				animation-duration: 1.5s;
+			}
+
+			@keyframes fade {
+				from {opacity: .4}
+				to {opacity: 1}
+			}
+			/* --- SLIDESHOW CSS END --- */
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">MNM Portfolio</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="home.html">Home</a></li>
+								<li><a href="writings.html">Writings</a></li>
+								<li><a href="certificates.html">Certificates</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Maji Ndongo Water Crisis</h2> 
+								<p>Infrastructure, Health, and Safety Analysis</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<!-- SLIDESHOW -->
+									<div class="slideshow-container">
+
+										<!-- Slide 1 -->
+										<div class="mySlides fade">
+											<div class="numbertext">1 / 6</div>
+											<img src="images/MJ 4.png" alt="Dashboard Overview">
+											<div class="text">National Dataset</div>
+										</div>
+
+										<!-- Slide 2 -->
+										<div class="mySlides fade">
+											<div class="numbertext">2 / 6</div>
+											<img src="images/MJ 5.png" alt="Regional Map">
+											<div class="text">Daily Queue Analysis</div>
+										</div>
+
+										<!-- Slide 3 -->
+										<div class="mySlides fade">
+											<div class="numbertext">3 / 6</div>
+											<img src="images/MJ 6.png" alt="SQL Results Table">
+											<div class="text">National Queue Trends</div>
+										</div>
+
+										<!-- Slide 4 -->
+										<div class="mySlides fade">
+											<div class="numbertext">4 / 6</div>
+											<img src="images/MJ 7.png" alt="SQL Results Table">
+											<div class="text">Pollution & Contamination</div>
+										</div>
+
+										<!-- Slide 5 -->
+										<div class="mySlides fade">
+											<div class="numbertext">5 / 6</div>
+											<img src="images/MJ 1.png" alt="SQL Results Table">
+											<div class="text">National Crime Statistics</div>
+										</div>
+									
+										<!-- Slide 6 -->
+										<div class="mySlides fade">
+											<div class="numbertext">6 / 6</div>
+											<img src="images/MJ 2.png" alt="SQL Results Table">
+											<div class="text">Water Survey Sources</div>
+										</div>
+
+										<!-- Next and previous buttons -->
+										<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+										<a class="next" onclick="plusSlides(1)">&#10095;</a>
+									</div>
+									<!-- END SLIDESHOW -->
+
+									<!-- Section 1: Project Overview -->
+									<section>
+										<h3 class="major">Project Overview</h3>
+										<p>This project analyzes the <strong>Maji Ndongo Water Crisis</strong>. Using SQL to clean and investigate national survey data, we uncovered a direct correlation between water access issues and national security threats. Click on the sections below to view the detailed findings.</p>
+										
+										<!-- DROPDOWN 1: Executive Summary -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">1: Executive Summary</summary>
+											<div class="dropdown-content">
+												<p><strong>The Status Quo:</strong> 66% of Maji Ndongo citizens lack basic water access.</p>
+												<p><strong>The Health Risk:</strong> Significant chemical contamination found in key provinces.</p>
+												<p><strong>The Critical Discovery:</strong> There is a direct correlation between water queue wait times and national crime rates against women.</p>
+												<p><strong>The Goal:</strong> To utilize the $146M budget to not just provide water, but to improve national security.</p>
+											</div>
+										</details>
+
+										<!-- DROPDOWN 2: Infrastructure Gap -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">2: The Infrastructure Gap</summary>
+											<div class="dropdown-content">
+												<p><strong>Demographics:</strong> Our nation is 69% Rural. The crisis is not happening in the cities, but in the remote provinces.</p>
+												<p><strong>Access Levels:</strong> Only 34% of our population has "Basic Access" (water in the home). The remaining 66% rely on shared taps, wells, or rivers.</p>
+												<p><strong>The Disparity:</strong> As seen in the "Sources by Town" chart, specific towns like Harare and Amina have zero access to in-home taps, relying entirely on shared infrastructure.</p>
+												<p><em>Speaker Note: "We are looking at a fundamental infrastructure gap. With the majority of our people living in rural settings, the reliance on 'Shared Taps' and 'Wells' is creating a bottleneck."</em></p>
+											</div>
+										</details>
+
+										<!-- DROPDOWN 3: Quality Crisis -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">3: The Quality Crisis (Pollution)</summary>
+											<div class="dropdown-content">
+												<p><strong>The Map:</strong> The red zones in the dashboard indicate high pollution levels.</p>
+												<p><strong>The Contaminants:</strong> The data is alarming—39,440 samples returned "Contaminated: Chemical." This vastly outweighs biological contamination.</p>
+												<p><strong>Implication:</strong> Simple boiling isn't enough. We require advanced filtration (Reverse Osmosis) infrastructure, not just simple wells.</p>
+												<p><em>Speaker Note: "It is not enough to just dig wells. The high prevalence of chemical contamination means we must invest in RO filters, which impacts our budget and timeline."</em></p>
+											</div>
+										</details>
+
+										<!-- DROPDOWN 4: Human Cost -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">4: The Human Cost – The "Queue" Analysis</summary>
+											<div class="dropdown-content">
+												<p><strong>Peak Congestion:</strong> The data shows a linear relationship: more people equals exponential wait times.</p>
+												<p><strong>The Worst Day:</strong> Saturday is the critical pain point. Average queue times spike on this day.</p>
+												<p><strong>The Demographic:</strong> Look at the "Composition of Queues." It is almost exclusively Women (Pink) and Children, with very few men present.</p>
+												<p><em>Speaker Note: "The burden of fetching water falls disproportionately on women and children. On Saturdays, they are trapped in these queues for hours."</em></p>
+											</div>
+										</details>
+
+										<!-- DROPDOWN 5: Hidden Crisis -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">5: The Hidden Crisis – Crime Correlation</summary>
+											<div class="dropdown-content">
+												<p><strong>Victim Profile:</strong> The pie chart is undeniable—the vast majority of crime victims are Female.</p>
+												<p><strong>Crime Type:</strong> The leading crimes are Harassment and Sexual Assault.</p>
+												<p><strong>The "Golden Hour":</strong> Crime peaks between 15:00 and 18:00 (3 PM - 6 PM).</p>
+												<p><em>Speaker Note: "This is where the data tells a terrifying story. When we overlay the 'Crime Time' with the 'Queue Time,' we see they overlap. Women are being targeted in the late afternoon while waiting for, or walking home with, water."</em></p>
+											</div>
+										</details>
+
+										<!-- DROPDOWN 6: The Solution -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">6: The Solution – National Improvement Plan</summary>
+											<div class="dropdown-content">
+												<p><strong>Budget:</strong> We have a total budget of $146.74 Million.</p>
+												<p><strong>Strategy:</strong> The plan involves a mix of drilling wells for access and installing RO filters for the chemical pollution.</p>
+												<p><strong>Focus Areas:</strong> Based on the data, we must prioritize Kilimani (highest queues) and provinces with high chemical pollution.</p>
+												<p><strong>KPI:</strong> Our target is to move 91% of the population to "Basic Access."</p>
+												<p><em>Speaker Note: "We have the budget. The data dictates that we cannot simply distribute resources evenly; we must target the high-queue, high-crime, and high-pollution zones first to save lives."</em></p>
+											</div>
+										</details>
+
+										<!-- DROPDOWN 7: Recommendations -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">7: Recommendations & Conclusion</summary>
+											<div class="dropdown-content">
+												<p><strong>Immediate Relief:</strong> Deploy temporary water tankers to Kilimani on Saturdays to reduce queue times immediately.</p>
+												<p><strong>Infrastructure Priority:</strong> Fast-track RO Filter installation in the chemically contaminated zones shown in the pollution report.</p>
+												<p><strong>Security:</strong> Increase police patrols near shared taps between 15:00 and 18:00, specifically targeting the crime hotspots identified.</p>
+												<p><strong>Long Term:</strong> Drill wells closer to rural homes to eliminate the need for long-distance travel, effectively reducing the "opportunity window" for crime.</p>
+												<p><em>Final Statement: "By solving the water crisis, we are not just hydrating a nation; we are protecting its women and children."</em></p>
+											</div>
+										</details>
+
+									</section>
+
+									<!-- Section 3: Findings -->
+									<section>
+										<h3 class="major">Recommendations & Conclusion</h3>
+										<p> 
+											Action Plan
+											Immediate Relief: Deploy temporary water tankers to Kilimani on Saturdays to reduce queue times immediately.
+											Infrastructure Priority: Fast-track RO Filter installation in the chemically contaminated zones shown in the pollution report.
+											Security: Increase police patrols near shared taps between 15:00 and 18:00, specifically targeting the crime hotspots identified.
+											Long Term: Drill wells closer to rural homes to eliminate the need for long-distance travel, effectively reducing the "opportunity window" for crime.
+											Final Statement: "By solving the water crisis, we are not just hydrating a nation; we are protecting its women and children."
+											</p>
+									</section>
+
+								</div>
+							</div>
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Interested in my data analysis work? Feel free to reach out for collaborations.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-phone">063 056 6977</li>
+								<li class="icon solid fa-envelope"><a href="mailto:msiziminxmtshali@gmail.com">msiziminxmtshali@gmail.com</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/msizi-mthimkhulu-3720bb23a">LinkedIn</a></li>
+								<li class="icon brands fa-github"><a href="https://github.com/msiziminxmtshali-jpg">Github</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Msizi Mthimkhulu. All rights reserved.</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<!-- Slideshow Script -->
+			<script>
+				let slideIndex = 1;
+				showSlides(slideIndex);
+
+				// Next/previous controls
+				function plusSlides(n) {
+					showSlides(slideIndex += n);
+				}
+
+				// Thumbnail image controls
+				function currentSlide(n) {
+					showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+					let i;
+					let slides = document.getElementsByClassName("mySlides");
+					if (n > slides.length) {slideIndex = 1}
+					if (n < 1) {slideIndex = slides.length}
+					for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";
+					}
+					slides[slideIndex-1].style.display = "block";
+				}
+				
+				// Optional: Auto-play every 5 seconds
+				setInterval(function() {
+					plusSlides(1);
+				}, 5000); 
+			</script>
+
+	</body>
+</html>

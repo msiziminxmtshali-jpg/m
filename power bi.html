@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Maji Ndongo Analysis - Msizi Mthimkhulu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Custom Styles -->
+		<style>
+			/* SQL Code Block Styling */
+			pre.code-block {
+				background: #2e3141;
+				border: 1px solid #ffffff33;
+				border-radius: 4px;
+				padding: 1.5em;
+				overflow-x: auto;
+				font-family: 'Courier New', Courier, monospace;
+				color: #e0e0e0;
+			}
+			.sql-keyword { color: #f7a072; font-weight: bold; }
+			.sql-string { color: #a8d5e2; }
+
+			/* --- DROPDOWN / ACCORDION STYLING --- */
+			details.custom-dropdown {
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				border-radius: 4px;
+				margin-bottom: 1em;
+				transition: all 0.3s ease;
+			}
+			
+			details.custom-dropdown[open] {
+				background: rgba(255, 255, 255, 0.1);
+				border-color: #f7a072; /* Highlight color when open */
+			}
+
+			summary.dropdown-trigger {
+				padding: 1em;
+				cursor: pointer;
+				font-weight: bold;
+				list-style: none; /* Remove default triangle */
+				position: relative;
+				padding-right: 2.5em;
+				color: #ffffff;
+			}
+
+			/* Custom arrow icon */
+			summary.dropdown-trigger::after {
+				content: '+'; 
+				position: absolute;
+				right: 1em;
+				font-weight: bold;
+				font-size: 1.2em;
+				color: #f7a072;
+			}
+
+			details.custom-dropdown[open] summary.dropdown-trigger::after {
+				content: '-';
+			}
+
+			/* Remove default arrow in Chrome/Safari */
+			summary.dropdown-trigger::-webkit-details-marker {
+				display: none;
+			}
+
+			.dropdown-content {
+				padding: 0 1.5em 1.5em 1.5em;
+				color: #dcdcdc;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				margin-top: 0.5em;
+			}
+			
+			.dropdown-content strong {
+				color: #f7a072; /* Accent color for findings */
+			}
+			
+			.dropdown-content ul {
+				margin-bottom: 1em;
+				margin-left: 1.5em;
+			}
+			
+			.dropdown-content li {
+				margin-bottom: 0.5em;
+			}
+
+			/* --- SLIDESHOW CSS START --- */
+			.slideshow-container {
+				max-width: 700px; 
+				position: relative;
+				margin: 0 auto 3em auto;
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				background: rgba(0,0,0,0.2);
+			}
+
+			.mySlides {
+				display: none;
+				text-align: center;
+			}
+			
+			.mySlides img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+
+			.prev, .next {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				width: auto;
+				margin-top: -22px;
+				padding: 16px;
+				color: white;
+				font-weight: bold;
+				font-size: 18px;
+				transition: 0.6s ease;
+				border-radius: 0 3px 3px 0;
+				user-select: none;
+				background-color: rgba(0,0,0,0.3);
+			}
+
+			.next {
+				right: 0;
+				border-radius: 3px 0 0 3px;
+			}
+
+			.prev:hover, .next:hover {
+				background-color: rgba(0,0,0,0.8);
+			}
+
+			.text {
+				color: #f2f2f2;
+				font-size: 15px;
+				padding: 8px 12px;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				text-align: center;
+				background-color: rgba(0,0,0,0.6);
+			}
+
+			.numbertext {
+				color: #f2f2f2;
+				font-size: 12px;
+				padding: 8px 12px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: rgba(0,0,0,0.5);
+			}
+
+			.fade {
+				animation-name: fade;
+				animation-duration: 1.5s;
+			}
+
+			@keyframes fade {
+				from {opacity: .4}
+				to {opacity: 1}
+			}
+			/* --- SLIDESHOW CSS END --- */
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">MNM Portfolio</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Projects</a></li>
+								<li><a href="elements.html">Certificates</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Maji Ndongo Water Crisis</h2> 
+								<p>Infrastructure, Health, and Safety Analysis</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<!-- SLIDESHOW -->
+									<div class="slideshow-container">
+										<!-- Slide 1 -->
+										<div class="mySlides fade">
+											<div class="numbertext"></div>
+											<img src="images/MJ 4.png" alt="Dashboard Overview">
+											<div class="text">National Dataset</div>
+										</div>
+										<!-- Slide 2 -->
+										<div class="mySlides fade">
+											<div class="numbertext"></div>
+											<img src="images/MJ 5.png" alt="Regional Map">
+											<div class="text">Daily Queue Analysis</div>
+										</div>
+										<!-- Slide 3 -->
+										<div class="mySlides fade">
+											<div class="numbertext"></div>
+											<img src="images/MJ 6.png" alt="SQL Results Table">
+											<div class="text">National Queue Trends</div>
+										</div>
+										<!-- Slide 4 -->
+										<div class="mySlides fade">
+											<div class="numbertext"></div>
+											<img src="images/MJ 7.png" alt="SQL Results Table">
+											<div class="text">Pollution & Contamination</div>
+										</div>
+										<!-- Slide 5 -->
+										<div class="mySlides fade">
+											<div class="numbertext"></div>
+											<img src="images/MJ 1.png" alt="SQL Results Table">
+											<div class="text">National Crime Statistics</div>
+										</div>
+										<!-- Slide 6 -->
+										<div class="mySlides fade">
+											<div class="numbertext"></div>
+											<img src="images/MJ 2.png" alt="SQL Results Table">
+											<div class="text">Water Survey Sources</div>
+										</div>
+
+										<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+										<a class="next" onclick="plusSlides(1)">&#10095;</a>
+									</div>
+									<!-- END SLIDESHOW -->
+
+									<!-- Section 1: Project Overview -->
+									<section>
+										<h3 class="major">Project Overview</h3>
+										<p>This analysis of the <strong>Maji Ndongo</strong> water crisis uses national survey data to uncover the relationship between infrastructure gaps, health risks, and national security. The findings below highlight how water access directly impacts the safety of women and children.</p>
+										
+										<!-- DROPDOWN 1 -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">1. Water Access and Population Distribution</summary>
+											<div class="dropdown-content">
+												<p><strong>Current Access Levels:</strong> The national survey indicates that only 34% of the population has basic water access, while 66% falls below basic standards.</p>
+												<ul>
+													<li><strong>Population Split:</strong> The country has a total implied population of around 71M (69% Rural vs. 31% Urban). Rural areas dominate, exacerbating access issues due to dispersed infrastructure.</li>
+													<li><strong>Source Usage:</strong> Shared taps serve the largest portion (43.84%), followed by tap-in-home (18.32%), wells (14.77%), broken taps (14.55%), and rivers (8.52%).</li>
+													<li><strong>Provincial Variations:</strong> Akatsi has the highest population, followed by Sokoto and Kilimani. Rural populations outnumber urban in most provinces.</li>
+												</ul>
+												<p><strong>Insight:</strong> The dominance of rural populations and shared sources points to a need for targeted rural infrastructure. The 14.55% of "broken taps" represents a quick-win opportunity for repairs.</p>
+											</div>
+										</details>
+
+										<!-- DROPDOWN 2 -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">2. Queue Management Daily and Weekly Patterns</summary>
+											<div class="dropdown-content">
+												<p><strong>Patterns:</strong> Average queue time peaks on Saturdays (~250-300 min) and Sundays (~150 min), dropping mid-week (Wednesday ~50 min).</p>
+												<ul>
+													<li><strong>Hourly Trends:</strong> Queues build from morning peaks, dip midday, and rise again in the evening (14:00–20:00).</li>
+													<li><strong>Provincial Totals:</strong> Kilimani has the highest total queued time (~1.0M min), followed by Akatsi and Sokoto.</li>
+													<li><strong>Queue vs. Service:</strong> Data shows queue time increases non-linearly with people served, suggesting severe overcrowding at high-volume sources.</li>
+												</ul>
+												<p><strong>Insight:</strong> Long weekend queues indicate limited access points. Recommendations include extending operating hours and adding public taps in high-queue provinces like Kilimani.</p>
+											</div>
+										</details>
+
+										<!-- DROPDOWN 3 -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">3. Queue Composition & Risk</summary>
+											<div class="dropdown-content">
+												<p><strong>Demographics:</strong> Queues are predominantly female (69%) and children (8%), with males making up only 23%. Women and children bear the main burden of water collection.</p>
+												<ul>
+													<li><strong>Daily Patterns:</strong> Longest queues occur on Saturdays.</li>
+													<li><strong>Hourly Trends:</strong> Queues rise sharply in the late afternoon/evening.</li>
+													<li><strong>Provincial Impact:</strong> High queue times in Kilimani force women to wait for hours.</li>
+												</ul>
+												<p><strong>Key Insight:</strong> Long weekend and evening queues force women and children to wait or travel during high-risk hours, directly linking to the elevated evening female victimization seen in crime data (harassment/sexual assault spike 18:00–20:00).</p>
+											</div>
+										</details>
+
+										<!-- DROPDOWN 4 -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">4. Pollution Analysis</summary>
+											<div class="dropdown-content">
+												<p><strong>Contamination Levels:</strong> Nearly 100% of recorded pollutants are chemical-based (39.44K ppm), with negligible biological results. This indicates severe industrial or agricultural runoff.</p>
+												<ul>
+													<li><strong>Results Breakdown:</strong> Clean sources account for 30.92%, Chemical contamination 40.8%, and Biological 28.28%.</li>
+													<li><strong>Provincial Map:</strong> Most provinces are marked red (high pollution), implying widespread chemical exposure.</li>
+												</ul>
+												<p><strong>Insight:</strong> Chemical pollution is the primary threat. Simple boiling is insufficient; the project must prioritize filtration systems (RO/UV) in red zones to mitigate health impacts.</p>
+											</div>
+										</details>
+
+										<!-- DROPDOWN 5 -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">5. Victim Gender Breakdown</summary>
+											<div class="dropdown-content">
+												<p><strong>Victims:</strong> Females are the majority victims (64%, ~50K cases), followed by males (25%) and children (10%).</p>
+												<ul>
+													<li><strong>Top Crimes:</strong> Harassment (highest, mostly female victims) and Sexual Assault (almost exclusively female).</li>
+													<li><strong>Highest Risk Provinces:</strong> Kilimani and Akatsi have the most victims, correlating with high population and long water queues.</li>
+													<li><strong>Timing:</strong> Female victimization spikes in the evening (18:00–20:00).</li>
+												</ul>
+												<p><strong>Key Insight:</strong> Inadequate water access forces women and girls to travel long distances at risky hours, significantly increasing vulnerability to harassment and sexual assault.</p>
+											</div>
+										</details>
+
+										<!-- DROPDOWN 6 -->
+										<details class="custom-dropdown">
+											<summary class="dropdown-trigger">6. Infrastructure Improvements and Budget</summary>
+											<div class="dropdown-content">
+												<p><strong>Strategy:</strong> Sokoto leads in improvements (~8K), followed by Kilimani (~6K). The primary focus is installing RO filters and repairing infrastructure.</p>
+												<ul>
+													<li><strong>Costs:</strong> RO Filters and Repairs cost ~100K each. The total budget is $146.74M.</li>
+													<li><strong>Budget Status:</strong> Data indicates low current spend ($16K) against the $112M goal, suggesting early-stage implementation or data lag.</li>
+													<li><strong>Access Improvement:</strong> Post-improvements, 91% of the population is projected to have basic access—a massive leap from 34%.</li>
+												</ul>
+												<p><strong>Insight:</strong> The focus on RO filters is cost-effective for addressing chemical pollution. However, current data suggests execution needs to scale rapidly to meet the 71M population demand.</p>
+											</div>
+										</details>
+
+								<!-- Section 3: Conclusion -->
+									<section>
+										<h3 class="major">Key Achievements<</h3>
+										<p>Dramatic increase in basic access (34% to 91%), demonstrating effective interventions.
+											Focus on chemical pollution via RO/UV filters aligns with contamination data.
+											Data-driven insights from queues could inform real-time optimizations.
+											Balanced source distribution, with shared taps providing broad coverage.</p>
+									</section>
+
+								<!-- Section 3: Conclusion -->
+									<section>
+										<h3 class="major">Challenges and Recommendations</h3>
+										<ul>
+											<li><strong>Inequities:</strong>Akatsi (high pop, low improvements) and Kilimani (high queues) need priority. Suggestion: Reallocate 20-30% of remaining budget (~146M total) to these areas.</li>
+											<li><strong>Pollution Persistence:</strong> Near-100% chemical ppm requires ongoing monitoring and expansion of filtration projects.</li>
+											<li><strong>Low Utilization:</strong>  0% completion and low spend suggest administrative hurdles; aim for phased milestones (e.g., 50% by 2026).</li>
+											<li><strong>Queue Inefficiencies:</strong>Reduce times by 30-50% through more drill wells in rural areas and app-based queue tracking.</li>
+											<li><strong>Scalability:</strong>  With 71M population and only 10K helped, target 1M+ beneficiaries by expanding to river-dependent communities (8.52%).</li>
+											<li><strong>Overall Impact:</strong> The project has transformed access but must address pollution and equity for sustainability. Future dashboards could include ROI metrics (e.g., cost per person helped) and health outcome correlations.
+											This analysis is derived directly from the visual data in the dashboards. If additional raw data or specific metrics are available, a deeper quantitative review (e.g., via code analysis) could refine these insights.</li>
+										</ul>
+									</section>
+
+								</div>
+							</div>
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Interested in my data analysis work? Feel free to reach out for collaborations.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-phone">063 056 6977</li>
+								<li class="icon solid fa-envelope"><a href="mailto:msiziminxmtshali@gmail.com">msiziminxmtshali@gmail.com</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/msizi-mthimkhulu-3720bb23a">LinkedIn</a></li>
+								<li class="icon brands fa-github"><a href="https://github.com/msiziminxmtshali-jpg">Github</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Msizi Mthimkhulu. All rights reserved.</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<!-- Slideshow Script -->
+			<script>
+				let slideIndex = 1;
+				showSlides(slideIndex);
+
+				// Next/previous controls
+				function plusSlides(n) {
+					showSlides(slideIndex += n);
+				}
+
+				// Thumbnail image controls
+				function currentSlide(n) {
+					showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+					let i;
+					let slides = document.getElementsByClassName("mySlides");
+					if (n > slides.length) {slideIndex = 1}
+					if (n < 1) {slideIndex = slides.length}
+					for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";
+					}
+					slides[slideIndex-1].style.display = "block";
+				}
+				
+				// Optional: Auto-play every 5 seconds
+				setInterval(function() {
+					plusSlides(1);
+				}, 5000); 
+			</script>
+
+	</body>
+</html>
